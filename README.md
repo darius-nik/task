@@ -1,12 +1,4 @@
-# 🌟 Live Background Authentication Dashboard
-
-A modern, responsive authentication system with **beautiful live animated backgrounds** built with Next.js, TypeScript, and SCSS Modules. Features a stunning light blue theme with floating particles, interactive canvas animations, and seamless dark mode support.
-
-![Live Background Demo](https://img.shields.io/badge/Live-Background-blue?style=for-the-badge)
-![Dark Mode](https://img.shields.io/badge/Dark-Mode-Enabled-green?style=for-the-badge)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-
+# 🌟 Authentication Page
 ## ✨ Features
 
 ### 🎨 **Live Animated Background**
