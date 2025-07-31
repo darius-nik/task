@@ -1,4 +1,4 @@
-# 🌟 Live Background Authentication Dashboard
+# 🔐 Authentication Page and Redirect to Dashboard (Next.js + TypeScript + SCSS Modules)
 
 A modern, responsive authentication system with **beautiful live animated backgrounds** built with Next.js, TypeScript, and SCSS Modules. Features a stunning light blue theme with floating particles, interactive canvas animations, and seamless dark mode support.
 
