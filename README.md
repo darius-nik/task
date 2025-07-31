@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🔐 Authentication Page and Redirect to Dashboard (Next.js + TypeScript + SCSS Modules)
 
 A modern, responsive authentication system with **beautiful live animated backgrounds** built with Next.js, TypeScript, and SCSS Modules. Features a stunning light blue theme with floating particles, interactive canvas animations, and seamless dark mode support.
@@ -8,9 +8,6 @@ A modern, responsive authentication system with **beautiful live animated backgr
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 
-=======
-# 🌟 Authentication Page
->>>>>>> 93bcbbc1e0e587d951f6d955ca2e03093216f159
 ## ✨ Features
 
 ### 🎨 **Live Animated Background**
