@@ -1,0 +1,399 @@
+.container {
+  min-height: 100vh;
+  padding: 2.5rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.themeToggleContainer {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  .headerLeft {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .backButton, .logoutButton {
+      font-weight: 600;
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--border-radius-sm);
+      transition: all 0.3s ease;
+      font-size: 0.875rem;
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+    }
+  }
+
+  .headerRight {
+    .welcomeText {
+      text-align: right;
+
+      .welcomeTitle {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.025em;
+      }
+
+      .welcomeSubtitle {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.userCard {
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .userInfo {
+    flex: 1;
+
+    .userName {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .userTitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .userEmail {
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      font-size: 1.125rem;
+    }
+
+    .userLocation {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .userDetails {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .userDetail {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .userAvatar {
+    flex-shrink: 0;
+    position: relative;
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary-color);
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-xl);
+      }
+    }
+
+    .onlineIndicator {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: var(--success-color);
+      border-radius: 50%;
+      border: 3px solid var(--card-background);
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  .infoCard {
+    background: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .cardIcon {
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .cardTitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .cardValue {
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      word-break: break-all;
+    }
+  }
+}
+
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingContainer p {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .infoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .themeToggleContainer {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+
+    .headerLeft {
+      order: 2;
+    }
+
+    .headerRight {
+      order: 1;
+
+      .welcomeText {
+        text-align: center;
+
+        .welcomeTitle {
+          font-size: 1.5rem;
+        }
+
+        .welcomeSubtitle {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  .userCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+
+    .userInfo {
+      .userDetails {
+        justify-content: center;
+      }
+    }
+
+    .userAvatar {
+      .avatar {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .themeToggleContainer {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+
+    .headerRight {
+      .welcomeText {
+        .welcomeTitle {
+          font-size: 1.375rem;
+        }
+
+        .welcomeSubtitle {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .userCard {
+    padding: 1.5rem;
+
+    .userInfo {
+      .userName {
+        font-size: 1.5rem;
+      }
+
+      .userEmail {
+        font-size: 1rem;
+      }
+
+      .userDetails {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .userAvatar {
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .infoGrid {
+    .infoCard {
+      padding: 1.5rem;
+
+      .cardIcon {
+        font-size: 2rem;
+      }
+
+      .cardValue {
+        font-size: 1.125rem;
+      }
+    }
+  }
+} 
